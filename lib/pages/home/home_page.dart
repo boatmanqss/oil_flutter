@@ -20,7 +20,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text('ราคาน้ำมัน ',style: GoogleFonts.prompt(fontSize: 20.0),),
+        title: Text('ราคาน้ำมัน',style: GoogleFonts.prompt(fontSize: 20.0),),
         actions: [
           IconButton(
             onPressed: () {},
