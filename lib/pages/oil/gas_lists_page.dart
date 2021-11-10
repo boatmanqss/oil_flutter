@@ -1,16 +1,17 @@
 import 'package:final_620710123/models/oil_item.dart';
 import 'package:final_620710123/services/api.dart';
-import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/material.dart';
 
-class OilListsPage extends StatefulWidget {
-  const OilListsPage({Key? key}) : super(key: key);
+class GasListsPage extends StatefulWidget {
+  const GasListsPage({Key? key}) : super(key: key);
 
   @override
-  _OilListsPageState createState() => _OilListsPageState();
+  _GasListsPageState createState() => _GasListsPageState();
 }
 
-class _OilListsPageState extends State<OilListsPage> {
+class _GasListsPageState extends State<GasListsPage> {
+
   late Future<List<OilItem>> _futureOilList;
 
   @override
@@ -52,9 +53,11 @@ class _OilListsPageState extends State<OilListsPage> {
               itemBuilder: (BuildContext context, int index) {
                 var oilItem = snapshot.data![index];
 
-                if(oilItem.id == 13)
+                if(oilItem.id != 13)
                   return SizedBox.shrink();
                 else
+
+                //print('${oilItem.name} ${oilItem.id}');
 
                 return Card(
                   clipBehavior: Clip.antiAliasWithSaveLayer,

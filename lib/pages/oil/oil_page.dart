@@ -5,6 +5,8 @@ import 'package:final_620710123/pages/oil/oil_lists_page.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 
+import 'gas_lists_page.dart';
+
 class OilPage extends StatefulWidget {
   const OilPage({Key? key}) : super(key: key);
 
@@ -37,7 +39,7 @@ class _OilPageState extends State<OilPage> {
         },
       ),
       body: Container(
-        child: OilListsPage(),
+        child: (_selectedBottomNavIndex == 0) ? OilListsPage() : GasListsPage() ,
       ),
     );
   }

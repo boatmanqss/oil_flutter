@@ -1,3 +1,4 @@
+import 'package:final_620710123/pages/oil/about_page.dart';
 import 'package:final_620710123/pages/oil/oil_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,16 +21,13 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text('ราคาน้ำมัน  ',style: GoogleFonts.prompt(fontSize: 20.0),),
+        title: Text('PTT OIL',style: GoogleFonts.prompt(fontSize: 20.0),),
         actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(Icons.search),
-          ),
-          IconButton(
-            onPressed: () {},
+          _subPageIndex == 0 ? IconButton(
+            onPressed: () {
+            },
             icon: Icon(Icons.refresh),
-          ),
+          ) : SizedBox.shrink(),
         ],
       ),
       drawer: Drawer(
@@ -66,7 +64,7 @@ class _HomePageState extends State<HomePage> {
               },
             ),
             ListTile(
-              title: _buildDrawerItem(Icons.person, 'ผู้จัดทำ', 1),
+              title: _buildDrawerItem(Icons.person, 'ติดต่อเรา', 1),
               onTap: () {
                 _showSubPage(context, 1);
               },
@@ -82,6 +80,8 @@ class _HomePageState extends State<HomePage> {
     switch (_subPageIndex) {
       case 0:
         return _currentPage;
+      case 1:
+        return AboutPage();
       default:
         return null;
     }
