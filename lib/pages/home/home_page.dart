@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.blue,
-        title: Text('PTT OIL',style: GoogleFonts.prompt(fontSize: 20.0),),
+        title: Text('PTT Station',style: GoogleFonts.prompt(fontSize: 20.0),),
         actions: [
           _subPageIndex == 0 ? IconButton(
             onPressed: () {
@@ -50,7 +50,7 @@ class _HomePageState extends State<HomePage> {
                   Padding(
                     padding: const EdgeInsets.only(top: 8.0, bottom: 8.0),
                     child: Text(
-                      'PTT OIL',
+                      'PTT Station',
                       style: Theme.of(context).textTheme.bodyText1,
                     ),
                   ),
